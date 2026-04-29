@@ -1,0 +1,30 @@
+<div class="login-container">
+  <div class="login-card">
+    <h2>Bienvenido</h2>
+    <p class="sub">Inicia sesión para continuar</p>
+
+    <form (ngSubmit)="login()">
+      <div class="input-group">
+        <input type="text" [(ngModel)]="username" name="username" placeholder="Usuario" required />
+      </div>
+
+      <div class="input-group">
+        <input
+          type="password"
+          [(ngModel)]="password"
+          name="password"
+          placeholder="Contraseña"
+          required
+        />
+      </div>
+
+      <button type="submit" [disabled]="loading">
+        {{ loading ? 'Entrando...' : 'Ingresar' }}
+      </button>
+
+      <div class="error" *ngIf="error">
+        {{ error }}
+      </div>
+    </form>
+  </div>
+</div>

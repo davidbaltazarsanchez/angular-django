@@ -1,0 +1,96 @@
+/* Fondo */
+.login-container {
+  display: flex;
+  justify-content: center; /* centra horizontal */
+  align-items: center; /* centra vertical */
+  min-height: 70vh; /* ocupa toda la pantalla */
+}
+/* Card */
+.login-card {
+  background: rgba(0, 81, 94, 0.85);
+  padding: 40px;
+  border-radius: 12px;
+  width: 320px;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+
+  text-align: center;
+  animation: fadeIn 0.6s ease;
+}
+
+/* Animación */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+h2 {
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.sub {
+  font-size: 13px;
+
+  margin-bottom: 20px;
+}
+
+/* Inputs */
+.input-group {
+  margin-bottom: 15px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+
+  border: 1px solid #ccc;
+  border-radius: 6px;
+
+  font-size: 14px;
+  outline: none;
+  transition: 0.2s;
+}
+
+input:focus {
+  border-color: #008c8c;
+  box-shadow: 0 0 5px rgba(0, 140, 140, 0.4);
+}
+
+/* Botón */
+button {
+  width: 100%;
+  padding: 10px;
+
+  background-color: #008c8c;
+  color: white;
+
+  border: none;
+  border-radius: 6px;
+
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  background-color: #006f6f;
+}
+
+button:disabled {
+  background-color: #999;
+  cursor: not-allowed;
+}
+
+/* Error */
+.error {
+  margin-top: 10px;
+  color: #c0392b;
+  font-size: 13px;
+}
